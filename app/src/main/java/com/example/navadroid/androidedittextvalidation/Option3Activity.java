@@ -54,6 +54,9 @@ public class Option3Activity extends AppCompatActivity {
             @Override
             public void validate(TextView textView, String text) {
                 // TODO: add your Password validation here
+                if (etPwd.getText().toString().length() < 6) {
+                    etPwd.setError("Required");
+                }
             }
         });
 
@@ -70,6 +73,10 @@ public class Option3Activity extends AppCompatActivity {
             isValidated = false;
         }
         // TODO: add your EditText validation here
+        if (etPwd.getText().toString().length() < 6) {
+            etPwd.setError("Required");
+            isValidated = false;
+        }
 
         return isValidated;
     }

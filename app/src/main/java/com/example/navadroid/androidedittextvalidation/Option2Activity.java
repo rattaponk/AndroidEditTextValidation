@@ -73,6 +73,10 @@ public class Option2Activity extends AppCompatActivity implements TextWatcher, V
             isValidated = false;
         }
         // TODO: add your EditText validation here
+        if (etPwd.getText().toString().length() < 6) {
+            etPwd.setError("Required");
+            isValidated = false;
+        }
 
         return isValidated;
     }
